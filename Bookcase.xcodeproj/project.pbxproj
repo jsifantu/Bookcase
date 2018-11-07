@@ -38,6 +38,7 @@
 		B9F21A521DDA3AEC00AA13AA /* BooksManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F21A511DDA3AEC00AA13AA /* BooksManagerTests.swift */; };
 		B9F21A971DDA849000AA13AA /* UIImageColorDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F21A961DDA849000AA13AA /* UIImageColorDetectionTests.swift */; };
 		B9F91AB31D36EA4700B12709 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F91AB21D36EA4700B12709 /* UIViewExtension.swift */; };
+		CA2BC594219349F900ACB350 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2BC593219349F900ACB350 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		B9F21A511DDA3AEC00AA13AA /* BooksManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksManagerTests.swift; sourceTree = "<group>"; };
 		B9F21A961DDA849000AA13AA /* UIImageColorDetectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageColorDetectionTests.swift; sourceTree = "<group>"; };
 		B9F91AB21D36EA4700B12709 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		CA2BC5922193412E00ACB350 /* Bookcase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bookcase.entitlements; sourceTree = "<group>"; };
+		CA2BC593219349F900ACB350 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA2BC594219349F900ACB350 /* CloudKit.framework in Frameworks */,
 				B9D48E8720273CB7006F2FF4 /* UIImageColors.framework in Frameworks */,
 				B9D48E8320273CB0006F2FF4 /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -165,6 +169,7 @@
 		B9019F791CE229D500CAE744 /* Bookcase */ = {
 			isa = PBXGroup;
 			children = (
+				CA2BC5922193412E00ACB350 /* Bookcase.entitlements */,
 				B9019F7A1CE229D500CAE744 /* AppDelegate.swift */,
 				B9019F7E1CE229D500CAE744 /* Main.storyboard */,
 				B9E07F471DA87CAE002D782C /* Media */,
@@ -233,6 +238,7 @@
 		B9CB2CD51DB6EE11007CEFFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA2BC593219349F900ACB350 /* CloudKit.framework */,
 				B968A48E1EAE623600E6C4C0 /* SwiftyJSON.framework */,
 				B99E972B1DCD35D9009DB968 /* UIImageColors.framework */,
 			);
@@ -335,15 +341,18 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "Craig Grummitt";
+				ORGANIZATIONNAME = "Jean-Do Sifantus";
 				TargetAttributes = {
 					B9019F761CE229D500CAE744 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 5M6U4VTSB8;
+						DevelopmentTeam = V455SKKV45;
 						LastSwiftMigration = 1000;
 						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.iCloud = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -596,7 +605,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5M6U4VTSB8;
+				CODE_SIGN_ENTITLEMENTS = Bookcase/Bookcase.entitlements;
+				DEVELOPMENT_TEAM = V455SKKV45;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Bookcase",
@@ -604,7 +614,7 @@
 				);
 				INFOPLIST_FILE = Bookcase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.interactivecoconut.Bookcase;
+				PRODUCT_BUNDLE_IDENTIFIER = "jsifantu-comcast.net.Bookcase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -614,7 +624,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5M6U4VTSB8;
+				CODE_SIGN_ENTITLEMENTS = Bookcase/Bookcase.entitlements;
+				DEVELOPMENT_TEAM = V455SKKV45;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Bookcase",
@@ -622,7 +633,7 @@
 				);
 				INFOPLIST_FILE = Bookcase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.interactivecoconut.Bookcase;
+				PRODUCT_BUNDLE_IDENTIFIER = "jsifantu-comcast.net.Bookcase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
